@@ -11,21 +11,14 @@ import "./App.scss";
 interface props {}
 
 function App({}: props) {
-    const [selectedPage, setSelectedPage] = useState<string>("home");
-    const [loaded, setLoaded] = useState<boolean>(false);
+    const [selectedPage, setSelectedPage] = useState<string>("home")
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        window.addEventListener("load", () => {
-            setTimeout(() => {
-                setLoaded(true);
-            }, 500);
-        });
-    }, []);
+    }, [])
 
     return (
         <div className="App">
-            {loaded && (
                 <>
                     <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                     <Home selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
@@ -35,7 +28,6 @@ function App({}: props) {
                     <ContactUs selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                     <Footer selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                 </>
-            )}
         </div>
     );
 }
