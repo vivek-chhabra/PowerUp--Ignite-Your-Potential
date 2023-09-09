@@ -1,6 +1,5 @@
-import React from "react";
-import './Button.scss'
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import './Button.scss'
 
 type Props = {
     text: string;

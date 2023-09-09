@@ -1,9 +1,7 @@
-import React from "react";
-import "./ContactUs.scss";
-import Button from "../navbar/button/Button";
 import img1 from "../../assets/ContactUsPageGraphic.png";
 import img2 from "../../assets/EvolveText.png";
 import { motion } from "framer-motion";
+import "./ContactUs.scss";
 
 type Props = {
     selectedPage: string;

@@ -5,7 +5,6 @@ import img4 from "../../assets/image4.png";
 import img5 from "../../assets/image5.png";
 import img6 from "../../assets/image6.png";
 import { motion } from "framer-motion";
-import React from "react";
 import "./Classes.scss";
 
 type Props = {
@@ -13,7 +12,7 @@ type Props = {
     setSelectedPage(val: string): void;
 };
 
-export default function Classes({ selectedPage, setSelectedPage }: Props) {
+export default function Classes({ setSelectedPage }: Props) {
     return (
         <motion.div className="Classes" onViewportEnter={() => setSelectedPage("our-classes")} id="our-classes">
             <div className="container flex-col">

@@ -1,8 +1,8 @@
 import logo from "../../assets/Logo.png";
-import React, { useState } from "react";
-import "./Navbar.scss";
-import Links from "./Links";
+import { useState } from "react";
 import Button from "./button/Button";
+import Links from "./Links";
+import "./Navbar.scss";
 
 interface Props {
     selectedPage: string;
@@ -13,7 +13,7 @@ export default function Navbar({ selectedPage, setSelectedPage }: Props) {
     const [activeNav, setActiveNav] = useState<boolean>(false);
     const [changeColor, setChangeColor] = useState(false)
 
-    const handleNav = (evt: React.MouseEvent<HTMLElement>) :void => {
+    const handleNav = () :void => {
         setActiveNav(!activeNav);
     };
 

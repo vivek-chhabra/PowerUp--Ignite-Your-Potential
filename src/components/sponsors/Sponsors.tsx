@@ -1,9 +1,8 @@
-import React from "react";
-import "./Sponsors.scss";
 import sponsorForbees from "../../assets/SponsorForbes.png";
 import sponsorFrotune from "../../assets/SponsorFortune.png";
 import sponsorRedBull from "../../assets/SponsorRedBull.png";
 import { motion } from "framer-motion";
+import "./Sponsors.scss";
 
 type Props = {};
 

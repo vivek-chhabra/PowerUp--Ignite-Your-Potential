@@ -1,4 +1,3 @@
-import React from "react";
 import img from "../../assets/Logo.png";
 import { motion } from "framer-motion";
 import "./Footer.scss";

@@ -1,19 +1,18 @@
 import homePageGraphics from "../../assets/HomePageGraphic.png";
 import homePageText from "../../assets/HomePageText.png";
-import EvoGym from "../../assets/EvolveText.png";
 import TransButton from "../navbar/button/TransButton";
+import EvoGym from "../../assets/EvolveText.png";
 import Button from "../navbar/button/Button";
-import React, { useEffect, useState } from "react";
-import "./Home.scss";
 import Sponsors from "../sponsors/Sponsors";
 import { motion } from "framer-motion";
+import "./Home.scss";
 
 type Props = {
     selectedPage: string;
     setSelectedPage(val: string): void;
 };
 
-const Home = ({selectedPage, setSelectedPage}: Props) => {
+const Home = ({ setSelectedPage}: Props) => {
     
     return (
         <>

@@ -1,17 +1,16 @@
-import React from "react";
-import "./DescriptionSec.scss";
-import { motion } from "framer-motion";
 import img from "../../assets/BenefitsPageGraphic.png";
 import img2 from "../../assets/AbstractWaves.png";
 import img3 from "../../assets/Sparkles.png";
 import Button from "../navbar/button/Button";
+import { motion } from "framer-motion";
+import "./DescriptionSec.scss";
 
 type Props = {
     selectedPage: string;
     setSelectedPage(val: string): void;
 };
 
-export default function DescriptionSec({ selectedPage, setSelectedPage }: Props) {
+export default function DescriptionSec({ setSelectedPage }: Props) {
     return (
         <div className="DescriptionSec">
             <motion.div className="container flex" onViewportEnter={() => setSelectedPage("benefits")}>

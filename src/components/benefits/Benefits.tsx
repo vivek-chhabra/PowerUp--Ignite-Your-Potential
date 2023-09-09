@@ -1,8 +1,7 @@
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
 import TransButton from "../navbar/button/TransButton";
-import React from "react";
-import "./Benefits.scss";
 import { motion } from "framer-motion";
+import "./Benefits.scss";
 
 type Props = {
     selectedPage: string;
@@ -37,7 +36,7 @@ const headerVariant = {
     visible: { opacity: 1, x: 0 },
 };
 
-export default function Benefits({ selectedPage, setSelectedPage }: Props) {
+export default function Benefits({  setSelectedPage }: Props) {
     return (
         <div className="Benefits" id="benefits">
             <motion.div className="container flex-col" onViewportEnter={() => setSelectedPage("benefits")} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={container}>

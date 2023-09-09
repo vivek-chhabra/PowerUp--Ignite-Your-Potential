@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import './Link.scss'
 

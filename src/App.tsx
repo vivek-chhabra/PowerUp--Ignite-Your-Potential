@@ -1,12 +1,12 @@
-import Navbar from "./components/navbar/Navbar";
-import { useEffect, useState } from "react";
-import "./App.scss";
-import Home from "./components/home/Home";
-import Benefits from "./components/benefits/Benefits";
 import DescriptionSec from "./components/discription/DescriptionSec";
-import Classes from "./components/ourClasses/Classes";
 import ContactUs from "./components/contactUs/ContactUs";
+import Classes from "./components/ourClasses/Classes";
+import Benefits from "./components/benefits/Benefits";
+import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import { useEffect, useState } from "react";
+import Home from "./components/home/Home";
+import "./App.scss";
 
 interface props {}
 
