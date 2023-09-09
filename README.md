@@ -1,27 +1,43 @@
-# React + TypeScript + Vite
+# 💪 PowerUp
+**Welcome to the PowerUp Gym Website Landing Page project! This is a fully responsive website designed for a gym using React, TypeScript, Framer Motion, Heroicons, SCSS, JSX, and FormSubmit to integrate messaging through the contact form to your email. It includes various sections like the home, benefits, our classes, and contact us.**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br>
 
-Currently, two official plugins are available:
+![09 09 2023_16 35 53_REC](https://github.com/vivek-chhabra/PowerUp--Ignite-Your-Potential/assets/105328667/ae893d6f-abe0-4d17-8d2d-b6fc7a07e87b)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br>
 
-## Expanding the ESLint configuration
+## 🚀 Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project was built using the following technologies:
 
-- Configure the top-level `parserOptions` property like this:
+- React: A JavaScript library for building user interfaces.
+- TypeScript: A statically typed superset of JavaScript.
+- Framer Motion: A motion library for animations.
+- Heroicons: A set of free, MIT-licensed high-quality SVG icons.
+- SCSS: A CSS preprocessor for more organized and maintainable styles.
+- JSX: A syntax extension for JavaScript often used with React.
+- FormSubmit: A tool for integrating and handling form submissions.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+<br>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## ✨ Features
+
+- Fully responsive design to provide an optimal viewing experience on various devices.
+- Smooth animations and transitions using Framer Motion.
+- Integration of Heroicons for high-quality icons.
+- Contact form with FormSubmit integration for sending messages to your email.
+
+<br>
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b feature/new-feature`.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your fork: `git push origin feature/new-feature`.
+5. Submit a pull request to the main repository.
+
+Thank you for contributing to PowerUp Gym Website Landing Page!
