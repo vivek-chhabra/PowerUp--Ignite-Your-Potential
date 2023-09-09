@@ -1,0 +1,190 @@
+@import "../../styles/breakpoints";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.Navbar {
+    padding: 2rem 5rem;
+    font-size: 1.6rem;
+    position: fixed;
+    border-radius: 0 0 2rem 2rem;
+    background-color: $gray-20;
+    z-index: 99;
+    width: 100%;
+    top: 0;
+    transition: all .2s ease;
+
+    @include md {
+        padding: 2rem 4rem;
+    }
+
+    @include sm {
+        padding: 2rem 3rem;
+    }
+
+    @include xs {
+        padding: 1.5rem 2rem;
+    }
+
+    &.change {
+        background-color: darken($primary-100, 3);
+        padding: 1rem 5rem;
+
+        @include md {
+            padding: 2rem 4rem;
+        }
+
+        @include sm {
+            padding: 1.5rem 3rem;
+        }
+
+        @include xs {
+            padding: 1.5rem 2rem;
+        }
+    }
+
+    a {
+        color: $text-brown-500;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5rem;
+        z-index: 99;
+
+        // on smaller screen devices
+        &.active {
+            @include md {
+                .fa-xmark {
+                    display: flex !important;
+                }
+                .fa-bars {
+                    display: none !important;
+                }
+            }
+            & > .right {
+                @include md {
+                    transform: translateX(0);
+                    display: flex;
+                    opacity: 1;
+                }
+            }
+        }
+
+        img:hover {
+            cursor: pointer;
+        }
+
+        & > .right {
+            width: 100%;
+            justify-content: center !important;
+
+            @include md {
+                background-color: $primary-100;
+                flex-direction: column;
+                position: fixed;
+                width: 27rem;
+                height: 100vh;
+                right: 0;
+                bottom: 0;
+                padding: 3rem;
+                transform: translateX(350px);
+                opacity: 0;
+            }
+
+            & > .center {
+                @include md {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    width: 100%;
+                    bottom: 15rem;
+                }
+                .links {
+                    gap: 2.5rem;
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                    white-space: pre;
+
+                    @include md {
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        width: 100% !important;
+                    }
+
+                    & > *:hover {
+                        cursor: pointer;
+                        color: $primary-500;
+                    }
+                }
+            }
+
+            .right.center {
+                width: 100%;
+                justify-content: flex-end !important;
+
+                @include md {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    bottom: 15rem;
+
+                    &::before {
+                        content: "";
+                        width: 1010%;
+                        height: 2px;
+                        background-color: rgba($text-brown-500, 0.4);
+                        margin-top: 2.5rem;
+                        border-radius: 1rem;
+                    }
+                }
+                gap: 2.5rem;
+                font-weight: 600;
+
+                & > *:not(:last-child):hover {
+                    color: $primary-500;
+                    cursor: pointer;
+                }
+
+                .Button {
+                    cursor: pointer;
+                    font-size: 1.4rem;
+                }
+
+                & > .Button {
+                    @include md {
+                        padding: 0;
+                        background-color: transparent;
+                        border-radius: 0;
+                        border: none;
+
+                        &:hover {
+                            background-color: transparent;
+                            color: $primary-500;
+                        }
+                    }
+                }
+            }
+        }
+
+        i {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: $primary-300;
+            }
+
+            @include md {
+                &.fa-bars {
+                    display: flex !important;
+                }
+            }
+        }
+    }
+}

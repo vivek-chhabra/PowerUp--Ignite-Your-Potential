@@ -1,0 +1,131 @@
+@import "../../styles/breakpoints";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.ContactUs {
+    padding: 0rem 5rem;
+    padding-block: 4rem !important;
+    font-size: 1.6rem;
+    background-color: white;
+    width: 100%;
+    min-height: 120vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    @include md {
+        padding: 6rem 4rem !important;
+        min-height: initial;
+    }
+
+    @include sm {
+        padding: 5rem 3rem !important;
+    }
+
+    @include xs {
+        padding: 3rem 2rem !important;
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        color: $text-brown-500;
+        top: 5rem;
+
+        @include md {
+            flex-direction: column;
+            padding-bottom: 4rem;
+        }
+
+        .left {
+            gap: 4.5rem;
+            place-self: flex-start;
+
+            @include md {
+                width: 100%;
+                gap: 3rem;
+            }
+
+            .head {
+                h1 {
+                    @include head-text();
+                    span {
+                        color: $primary-500;
+                    }
+                }
+                p {
+                    font-weight: 500;
+                    max-width: 80rem;
+                }
+            }
+            form {
+                gap: 2rem;
+                width: 100%;
+                & > *:not(:last-child) {
+                    border-radius: 0.8rem;
+                    padding: 1.5rem 1.8rem;
+                    font-size: 1.8rem;
+                    border: none;
+                    color: white;
+                    background-color: $primary-300;
+                    outline: 2px solid rgba(255, 255, 255, 0);
+                    font-family: 'Jost', sans-serif;
+
+                    &::placeholder {
+                        color: white;
+                        font-family: 'Jost', sans-serif;
+                    }
+                    &:focus {
+                        outline: 2px solid $primary-500;
+                    }
+                }
+                [name="Name*"] {
+                    text-transform: capitalize;
+                }
+                textarea {
+                    resize: none;
+                }
+                .Button {
+                    margin-top: 3rem;
+                    width: fit-content;
+                    cursor: pointer;
+                    font-size: 1.6rem;
+                    @include button(1.3, 7);
+                    border-radius: 0.8rem;
+                    font-family: 'Jost', sans-serif;
+
+                    @include md {
+                        margin-top: 1rem;
+                        padding: 1.2rem 6rem !important;
+                    }
+                }
+            }
+        }
+
+        .right {
+            .img-1 {
+                z-index: 5;
+                width: 110%;
+
+                @include md {
+                    display: none;
+                }
+            }
+
+            .img-2 {
+                position: absolute;
+                bottom: -7rem;
+                right: -5rem;
+                z-index: 1;
+                width: 180%;
+
+                @include md {
+                    display: none;
+                }
+            }
+        }
+    }
+}

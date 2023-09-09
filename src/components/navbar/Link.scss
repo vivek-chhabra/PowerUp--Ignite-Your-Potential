@@ -1,0 +1,7 @@
+@import "../../styles/breakpoints";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.active {
+    color: $primary-500 !important;
+}

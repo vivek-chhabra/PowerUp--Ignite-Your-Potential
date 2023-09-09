@@ -1,0 +1,110 @@
+@import "../../styles/breakpoints";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.Home {
+    min-height: 120vh;
+    padding: 2rem 5rem;
+    margin-top: 2rem;
+    max-height: fit-content;
+    background-color: $gray-20;
+
+    @include md {
+        padding: 2rem 4rem;
+        min-height: initial;
+        padding-bottom: 6rem !important;
+    }
+
+    @include sm {
+        padding: 2rem 3rem;
+    }
+
+    @include xs {
+        padding: 2rem 2rem;
+        margin-top: 0;
+    }
+
+    .container {
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        height: inherit;
+
+        @include md {
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        & > img {
+            position: absolute;
+            top: 11rem;
+            left: -8rem;
+            transition: none;
+
+            @include md {
+                display: none;
+            }
+        }
+
+        @include md {
+            flex-direction: column;
+        }
+
+        .left {
+            gap: 3rem;
+            width: 50%;
+            transition: none;
+
+            @include md {
+                width: 90%;
+                margin-top: 10rem;
+            }
+
+            @include sm {
+                width: 100%;
+            }
+
+            @include xs {
+                gap: 2rem;
+            }
+
+            img {
+                max-width: 47rem;
+                width: 100%;
+
+                @include xs {
+                    max-width: 35rem;
+                }
+            }
+
+            .content {
+                gap: 4rem;
+
+                @include xs {
+                    gap: 3rem;
+                }
+                .btns {
+                    gap: 2rem;
+                    transition: none;
+                }
+                .text {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+            }   
+        }
+
+        .right {
+            img {
+                width: 100%;
+            }
+            margin-inline: auto;
+        }
+    }
+}
+.sponsor {
+    // top: 1rem;
+    @include md {
+        display: none;
+    }
+}

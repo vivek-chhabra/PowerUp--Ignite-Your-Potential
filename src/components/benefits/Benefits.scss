@@ -1,0 +1,94 @@
+@import "../../styles/breakpoints";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.Benefits {
+    width: 100%;
+    min-height: fit-content;
+    font-size: 1.6rem;
+    margin-top: 16rem;
+    background-color: white;
+    padding: 9rem 5rem 7rem 7rem !important;
+
+    @include md {
+        padding: 6rem 4rem !important;
+        margin-top: 3rem;
+    }
+
+    @include sm {
+        padding: 5rem 3rem !important;
+    }
+
+    @include xs {
+        padding: 3rem 2rem !important;
+    }
+
+    .container {
+        height: 100%;
+        gap: 4rem;
+        justify-content: center;
+
+        .head {
+            color: $text-brown-500;
+            transition: none;
+            h1 {
+                @include head-text();
+            }
+            p {
+                font-size: 1.5rem;
+                font-weight: 500;
+                max-width: 82rem;
+            }
+        }
+
+        .benefit-cards {
+            gap: 3rem;
+            text-align: center;
+            transition: none;
+
+            @include md {
+                flex-direction: column;
+            }
+
+            & > * {
+                border-radius: 2rem;
+                border: 0.2rem solid $primary-100;
+                padding: 2rem;
+                height: 34.6rem;
+                flex: 1;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                columns: $text-brown-500;
+                transition: none;
+
+                @include md {
+                    padding: 5rem 2rem;
+                }
+
+                .icon {
+                    width: 5.5rem;
+                    height: 5.5rem;
+                    padding: 1.1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid $gray-100;
+                    background-color: $primary-100;
+                    border-radius: 50%;
+                    color: $text-brown-500;
+                }
+
+                .title {
+                    font-weight: 600;
+                    font-size: 2rem;
+                }
+
+                & > .button {
+                    transition: none;
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+}

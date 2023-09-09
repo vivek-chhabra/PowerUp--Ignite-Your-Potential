@@ -1,0 +1,102 @@
+@import "../../styles/breakpoints";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.DescriptionSec {
+    padding: 0 5rem;
+    padding-block: 7rem !important;
+    font-size: 1.6rem;
+    background-color: white;
+    width: 100%;
+
+    @include md {
+        padding: 6rem 4rem !important;
+    }
+
+    @include sm {
+        padding: 5rem 3rem !important;
+    }
+
+    @include xs {
+        padding: 3rem 2rem !important;
+    }
+
+    .container {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+
+        @include md {
+            flex-direction: column;
+        }
+
+        @include xs {
+            flex-direction: column;
+            margin-top: 0rem;
+        }
+
+        .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                @include md {
+                    width: 90%;
+                }
+            }
+        }
+
+        .right {
+            color: $text-brown-500;
+            img {
+                width: 12rem;
+            }
+            img:first-child {
+                right: 5rem;
+
+                @include md {
+                    right: 3rem;
+                }
+
+                @include sm {
+                    right: 2rem;
+                }
+            }
+            img:last-child {
+                left: 70%;
+                bottom: 6rem;
+
+                @include md {
+                    left: 80%;
+                    bottom: 7rem;
+                }
+
+                @include sm {
+                    left: 70%;
+                    bottom: 8rem;
+                }
+            }
+            .content {
+                gap: 3rem;
+                h1 {
+                    @include head-text();
+                    margin-bottom: 0;
+                    transition: none;
+
+                    span {
+                        color: $primary-500;
+                    }
+                }
+                .description {
+                    gap: 3rem;
+                    transition: none;
+                }
+                .Button {
+                    margin-top: 2rem;
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
