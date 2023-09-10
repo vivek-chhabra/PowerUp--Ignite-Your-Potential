@@ -124,6 +124,7 @@
             .right.center {
                 width: 100%;
                 justify-content: flex-end !important;
+                color: $text-brown-500 !important;
 
                 @include md {
                     justify-content: flex-start;
@@ -142,8 +143,8 @@
                 gap: 2.5rem;
                 font-weight: 600;
 
-                & > *:not(:last-child):hover {
-                    color: $primary-500;
+                & > .signin:hover {
+                    color: $primary-500 !important;
                     cursor: pointer;
                 }
 
